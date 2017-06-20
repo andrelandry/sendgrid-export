@@ -33,8 +33,9 @@ var result = "";
     valid = (typeof email !== 'null');
     var date = $(this).find("td.time").text();
     var type = $(this).find("td.type").find("span.name").text();
+    var smtp_id = $(this).find('.tooltip-js-content dl dt:contains(SMTP-ID) + dd').text()
     if(valid){
-        result += email + "," + date + "," + type + "<br/>";
+        result += email + "," + date + "," + type + "," + smtp_id + "<br/>";
     }
   });
   writeConsole(result);
